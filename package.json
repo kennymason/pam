@@ -1,0 +1,22 @@
+{
+  "name": "pam",
+  "version": "1.0.0",
+  "description": "Personal Automation Management CLI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "bin": {
+    "pam": "./bin/index.js"
+  },
+  "author": "Kenny Mason",
+  "license": "ISC",
+  "dependencies": {
+    "boxen": "^5.1.2",
+    "chalk": "^4.1.2",
+    "yargs": "^17.7.1"
+  }
+}
