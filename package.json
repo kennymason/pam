@@ -15,9 +15,17 @@
   "author": "Kenny Mason",
   "license": "ISC",
   "dependencies": {
+    "@callmekory/sengled-api": "^1.0.3",
+    "@google-cloud/local-auth": "^2.1.1",
     "axios": "^1.3.4",
     "boxen": "^5.1.2",
     "chalk": "^4.1.2",
+    "child_process": "^1.0.2",
+    "dotenv": "^16.0.3",
+    "fs": "^0.0.1-security",
+    "googleapis": "^112.0.0",
+    "path": "^0.12.7",
+    "process": "^0.11.10",
     "readline": "^1.3.0",
     "yargs": "^17.7.1"
   }

@@ -15,11 +15,11 @@ function askQuestion(query) {
   }))
 }
 
-async function askGPT (prompt) {
+async function askGPT (prompt, key) {
   if (!prompt) throw new Error('No prompt provided');
 
   const headers = {
-    'Authorization': `Bearer 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`,
+    'Authorization': `Bearer ${key}`,
     'Content-Type': 'application/json'
   };
   

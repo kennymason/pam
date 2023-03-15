@@ -1,0 +1,15 @@
+{
+  "commands": [
+    {
+      "id": "kland",
+      "path": "/Users/mason/Documents/Obsidian/KennyLand",
+      "message": "Auto-Commit",
+      "args": [],
+      "actions": [
+        "git add .",
+        "git commit -m ${message}",
+        "git push"
+      ]
+    }
+  ]
+}

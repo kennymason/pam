@@ -1,0 +1,40 @@
+{
+  "commands": [
+    {
+      "name": "gpt",
+      "args": ["m"],
+      "file": "./gpt.js",
+      "actions": [],
+      "message": "Hello"
+    },
+    {
+      "name": "kland",
+      "args": ["m"],
+      "file": "./shell.js",
+      "actions": [
+        "git add .",
+        "git commit -m ${message}",
+        "git push"
+      ],
+      "message": "Auto Commit"
+    },
+    {
+      "name": "lights",
+      "args": [],
+      "file": "./sengled.js",
+      "actions": [
+        {"all": true}
+      ],
+      "message": ""
+    },
+    {
+      "name": "darks",
+      "args": [],
+      "file": "./sengled.js",
+      "actions": [
+        {"all": false}
+      ],
+      "message": ""
+    }
+  ]
+}
