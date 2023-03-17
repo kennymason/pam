@@ -15,7 +15,7 @@
         "path": "/Users/mason/Documents/Obsidian/KennyLand",
         "actions": [
           "git add .",
-          "git commit -m ${message}",
+          "git commit -m \"Auto-Commit\"",
           "git push"
         ]
       },
