@@ -1,30 +1,29 @@
+const { promisify } = require('util');
 const { exec } = require('child_process');
-const { commands } = require('./git.json');
+// const execAsync = promisify(exec);
 
-function main (input) {
-  let cmd = {};
-  for (key in commands) {
-    if (input == key) {
-      cmd = commands[key];
-      break;
-    }
+async function run (obj, input) {
+  if (obj == {}) return;
+  if (obj.actions == []) return
+
+  const actions = obj.actions.actions.join(" && ");
+  const path = obj.actions.path == "" ? process.cwd() : obj.actions.path
+
+  try {
+    console.log(actions);
+    exec(actions, { path }, (err, stdout, stderr) => {
+      console.log(stdout);
+      if (err) {
+        console.error(err);
+        return;
+      }
+    });
   }
-
-  if (cmd == {}) return;
-  if (cmd.actions == []) return
-
-  const actions = " | ".join(cms.actions);
-  const path = cmd.path || process.cwd
-
-  exec(actions, { path }, (err, stdout, stderr) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-    console.log(stdout);
-  });
+  catch (e) {
+    console.error(e);
+  }
 }
 
-// function run (obj) {
-//   main()
-// }
+module.exports = {
+  run: run
+};

@@ -3,25 +3,66 @@
     {
       "name": "gpt",
       "args": ["m"],
-      "file": "./gpt.js",
+      "file": "gpt",
       "actions": [],
       "message": "Hello"
     },
     {
       "name": "kland",
       "args": ["m"],
-      "file": "./shell.js",
-      "actions": [
-        "git add .",
-        "git commit -m ${message}",
-        "git push"
-      ],
-      "message": "Auto Commit"
+      "file": "shell",
+      "actions": {
+        "path": "/Users/mason/Documents/Obsidian/KennyLand",
+        "actions": [
+          "git add .",
+          "git commit -m ${message}",
+          "git push"
+        ]
+      },
+      "message": "Auto-Commit"
+    },
+    {
+      "name": "push",
+      "args": ["m"],
+      "file": "shell",
+      "actions": {
+        "path": "",
+        "actions": [
+          "git add .",
+          "git commit -m \"Auto-Commit\"",
+          "git push"
+        ]
+      },
+      "message": "Auto-Commit"
+    },
+    {
+      "name": "ls",
+      "args": [""],
+      "file": "shell",
+      "actions": {
+        "path": "",
+        "actions": [
+          "ls"
+        ]
+      },
+      "message": ""
+    },
+    {
+      "name": "update",
+      "args": [""],
+      "file": "shell",
+      "actions": {
+        "path": "/Users/mason/Develop/projects/pam",
+        "actions": [
+          "npm i -g ."
+        ]
+      },
+      "message": ""
     },
     {
       "name": "lights",
       "args": [],
-      "file": "./sengled.js",
+      "file": "sengled",
       "actions": [
         {"all": true}
       ],
@@ -30,7 +71,7 @@
     {
       "name": "darks",
       "args": [],
-      "file": "./sengled.js",
+      "file": "sengled",
       "actions": [
         {"all": false}
       ],

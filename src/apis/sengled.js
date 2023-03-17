@@ -47,6 +47,11 @@ const controlDevice = async (creds) => {
   }
 }
 
+async function run () {
+  
+}
+
 module.exports = {
-  controlDevice: controlDevice
+  controlDevice: controlDevice,
+  run: run
 }
